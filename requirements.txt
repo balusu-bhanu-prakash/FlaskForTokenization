@@ -1,5 +1,2 @@
 flask
-streamlit
 nltk
-requests
-pytest
