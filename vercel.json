@@ -9,6 +9,7 @@
   "routes": [
     {
       "src": "/tokenize",
+      "methods": ["POST"],
       "dest": "api/flask_api.py"
     }
   ]
