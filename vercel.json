@@ -1,16 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/flask_api.py",
-      "use": "@vercel/python"
-    }
+    { "src": "api/flask_api.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/tokenize",
-      "methods": ["POST"],
-      "dest": "api/flask_api.py"
-    }
+    { "src": "/tokenize", "dest": "/api/flask_api.py" }
   ]
 }

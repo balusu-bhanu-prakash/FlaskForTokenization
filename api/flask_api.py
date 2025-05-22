@@ -1,12 +1,14 @@
-# flask_api.py
+# api/tokenize.py
 from flask import Flask, request, jsonify
-from tokenizer import tokenize_text  # your custom tokenizer function
+from nltk.tokenize import TreebankWordTokenizer
 
 app = Flask(__name__)
+tokenizer = TreebankWordTokenizer()
+
 
 @app.route("/tokenize", methods=["POST"])
-def tokenize():
+def tokenize_text():
     data = request.get_json()
     text = data.get("text", "")
-    tokens = tokenize_text(text)
+    tokens = tokenizer.tokenize(text)
     return jsonify({"tokens": tokens})
